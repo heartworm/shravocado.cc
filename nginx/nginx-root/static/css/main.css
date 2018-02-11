@@ -1,0 +1,149 @@
+.b-banner {
+    display: block;
+    text-align: center;
+}
+
+.b-banner__img {
+    height: 10em;
+}
+
+.b-banner__title-box {
+    background-color: rgba(255,255,255,0.5);
+    padding: 0;
+}
+
+.b-banner__subtitle {
+    font-family: 'Lora', serif;
+    font-size: 12pt;
+    font-style: italic;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.b-banner__title {
+    line-height: 80%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: 'Crete Round', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32pt;
+    color: #333;
+    text-shadow: -2px -1px 0.5px #EEE;
+}
+
+.b-banner__nav {
+    margin-top: 0.5em;
+    padding: 0.5em 0;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+    display: block;
+}
+
+.b-banner__nav-group {
+    display: inline;
+}
+
+.b-banner__nav-link {
+    display: inline;
+    padding: 0 0.1em;
+}
+
+.b-banner__nav-link--sep:after {
+    content: " 🥑 ";
+}
+
+@media (min-width: 400px) {
+    .b-banner__title {
+        font-size: 48pt;
+    }
+
+    .b-banner__subtitle {
+        font-size: 18pt;
+    }
+}
+
+
+@media (min-width: 850px) {
+    .b-banner {
+        height: 500px;
+    }
+
+    .b-banner__title-nav-box {
+        display: block;
+        text-align: center;
+        position: relative;
+        bottom: 17em;
+    }
+
+    .b-banner__title-box {
+        background-color: rgba(255,255,255,0.5);
+        padding: 1em 0;
+    }
+
+    .b-banner__subtitle {
+        font-family: 'Lora', serif;
+        font-size: 24pt;
+        font-style: italic;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .b-banner__title {
+        line-height: 80%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        font-family: 'Crete Round', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 72pt;
+        color: #333;
+        text-shadow: -2px -1px 0.5px #EEE;
+    }
+
+    .b-banner__nav {
+        z-index: -2;
+        border-top: 1px dashed black;
+        border-bottom: none;
+        margin-top: 0em;
+        padding: 1em 0;
+        position: relative;
+        text-align: center;
+    }
+
+    .b-banner__nav-link {
+        font-size: 18pt;
+    }
+
+    .b-banner__nav-group {
+        position: absolute;
+    }
+
+    .b-banner__nav-group--left {
+        right: 50%;
+        margin-right: 130px;
+        text-align: right;
+    }
+
+    .b-banner__nav-group--right {
+        text-align: left;
+        margin-left: 160px;
+        left: 50%;
+    }
+
+    .b-banner__img {
+        height: 30em;
+        z-index: -1;
+    }
+    
+    .b-banner__nav-link:last-child:after {
+        content: none;
+    }
+
+}
+
+
