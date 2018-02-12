@@ -26,13 +26,17 @@
     line-height: 80%;
     margin: 0;
     padding: 0;
+    font-size: 32pt;
     display: block;
     font-family: 'Crete Round', serif;
     font-style: italic;
-    font-weight: 400;
-    font-size: 32pt;
-    color: #333;
     text-shadow: -2px -1px 0.5px #EEE;
+    font-weight: 400;
+}
+
+.b-banner__title-link, .b-banner__title-link:hover {
+    color: #333;
+    text-decoration: none;
 }
 
 .b-banner__nav {
