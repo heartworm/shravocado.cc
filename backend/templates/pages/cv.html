@@ -1,18 +1,51 @@
 {% extends "base.html" %}
 
+{% block head %}
+<style>
+    .b-header {
+        text-align: center;
+    }
+
+    .b-class__name {
+        font-size: 32pt;
+    }
+
+    .b-class__achievement {
+        margin-left: 1em;
+        padding-left: 1em;
+        border-left: 1px dashed black;
+    }
+
+    .b-class__achievement-name {
+        font-size: 24pt;
+    }
+
+    .b-class__achievement-subname, .b-class__achievement-name {
+        margin: 0 0;
+    }
+
+    .b-class__achievement-body {
+        margin-left: 1em;
+    }
+</style>
+{% endblock %}
+
+
 {% block content %}
-<header class="personal_details">
-    <h1>Shravan Lal</h1>
+<header class="b-header">
+    <h1>Curriculum Vitae</h1>
 </header>
-<section class="achievement_class">
-    <h1>Education</h1>
-    <article class="achievement">
-        <header>
-            <h2 class="name">Queensland University of Technology</h2>
-            <h3 class="subname">Bachelor of Engineering</h3>
-            <span class="date">2015 - Present</span>
+<section class="b-class">
+    <h1 class="b-class__name">
+        Education
+    </h1>
+    <article class="b-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-class__achievement-name">Queensland University of Technology</h2>
+            <p class="b-class__achievement-subname">Bachelor of Engineering</p>
+            <p class="b-class__achievement-time">2015 - Present</p>
         </header>
-        <div class="body">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Majoring in Mechatronics, with minors in Robotics and Languages.</li>
                 <li>Maintained a GPA of 6.6 throughout 2 years.</li>
@@ -21,13 +54,13 @@
             </ul>
         </div>
     </article>
-    <article class="achievement">
-        <header>
-            <h2 class="name">QASMT</h2>
-            <h3 class="subname">International Baccaleaureate Diploma</h3>
-            <span class="date">2013 - 2015</span>
+    <article class="b-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-class__achievement-name">QASMT</h2>
+            <p class="b-class__achievement-subname">International Baccaleaureate Diploma</p>
+            <p class="b-class__achievement-time">2013 - 2015</p>
         </header>
-        <div class="body">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Academically selective High School.</li>
                 <li>Completed the IB Diploma with a score of 42 out of 45 (equivalent to ATAR 99.7 out of 100).</li>
@@ -35,10 +68,10 @@
         </div>
     </article>
 </section>
-<section class="achievement_class">
-    <h1>Achievements</h1>
-    <article class="achievement">
-        <div class="body">
+<section class="b-class">
+    <h1 class="b-class__name">Achievements</h1>
+    <article class="b-class__achievement">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Participated in 2017 Unearthed Hackathon: Winner of the People's Choice Prize.</li>
                 <li>Participated in 2016 Tanda Hackathon.</li>
@@ -48,13 +81,15 @@
         </div>
     </article>
 </section>
-<section class="achievement_class">
-    <h1>Compentencies</h1>
-    <article class="achievement">
-        <header>
-            <h2 class="name">Computing Skills</h2>
+<section class="b-class">
+    <h1 class="b-class__name">
+        Compentencies
+    </h1>
+    <article class="b-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-class__achievement-name">Computing Skills</h2>
         </header>
-        <div class="body">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Confidence in OOP Languages: Python, Java, C# (.NET), C++</li>
                 <li>Proficiency in Web Development: JavaScript (ECMAScript7), PHP, Flask, Django, NODE.js</li>
@@ -65,11 +100,11 @@
             </ul>
         </div>
     </article>
-    <article class="achievement">
-        <header>
-            <h2 class="name">Engineering Skills</h2>
+    <article class="b-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-class__achievement-name">Engineering Skills</h2>
         </header>
-        <div class="body">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Proficient in Circuit Design using EAGLE and Altium suites.</li>
                 <li>Knowledge of 3D design, and FDM modelling.</li>
@@ -77,11 +112,11 @@
             </ul>
         </div>
     </article>
-    <article class="achievement">
-        <header>
-            <h2 class="name">Other Skills</h2>
+    <article class="b-class__achievement">
+        <heade class="b-achievement-header"r>
+            <h2 class="b-class__achievement-name">Other Skills</h2>
         </header>
-        <div class="body">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Essential First Aid Certificate (First Aid Queensland).</li>
                 <li>Native English speaker with fluency in Hindi</li>
@@ -93,17 +128,19 @@
         </div>
     </article>
 </section>
-<section class="achievement_class">
-    <h1>Employment</h1>
-    <article class="achievement">
-        <header>
-            <h2 class="name">
+<section class="b-class">
+    <h1 class="b-class__name">
+        Employment
+    </h1>
+    <article class="b-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-class__achievement-name">
                 <a href="https://www.credfin.com.au/">Jacaranda Finance (CredFin Service)</a>
             </h2>
-            <h3 class="subname">Backend Developer</h3>
-            <span class="date">Mid 2017 - Present</span>
+            <p class="b-class__achievement-subname">Backend Developer</p>
+            <p class="b-class__achievement-time">Mid 2017 - Present</p>
         </header>
-        <div class="body">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Built web scraping engines for retrieving transaction data from clients' bank accounts. Uses PhantomJS.</li>
                 <li>Built backend for transaction categorisation. Uses Django, Numpy and other technolgies.</li>
@@ -114,54 +151,56 @@
             </ul>
         </div>
     </article>
-    <article class="achievement">
-        <header>
-            <h2 class="name">
+    <article class="b-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-class__achievement-name">
                 <a href="https://qasmt.eq.edu.au">Education Queensland (QASMT)</a>
             </h2>
-            <h3 class="subname">Physics Tutor</h3>
-            <span class="date">2016</span>
+            <p class="b-class__achievement-subname">Physics Tutor</p>
+            <p class="b-class__achievement-time">2016</p>
         </header>
-        <div class="body">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Involved setting out mini lessons, and assisting Grade 12 students with understanding Higher Level Physics concepts.</li>
                 <li>Occasionally tutored maths, english and other subjects on request.</li>
             </ul>
         </div>
     </article>
-    <article class="achievement">
-        <header>
-            <h2 class="name">
+    <article class="b-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-class__achievement-name">
                 <a href="http://1010tutoring.com/">10/10 Tutoring</a>
             </h2>
-            <h3 class="subname">IPT / Mathematics Tutor</h3>
-            <span class="date">2016 - 2017</span>
+            <p class="b-class__achievement-subname">IPT / Mathematics Tutor</p>
+            <p class="b-class__achievement-time">2016 - 2017</p>
         </header>
-        <div class="body">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Tutored High school students in IPT (Object Oriented Programming, Databases and Web Devlopment) and Mathematics C level.</li>
             </ul>
         </div>
     </article>
-    <article class="achievement">
-        <header>
-            <h2 class="name">
+    <article class="b-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-class__achievement-name">
                 <a href="https://dominos.com.au">Domino's Pizza</a>
             </h2>
-            <h3 class="subname">Delivery Driver and Front Desk</h3>
-            <span class="date">2016 - 2017</span>
+            <p class="b-class__achievement-subname">Delivery Driver and Front Desk</p>
+            <p class="b-class__achievement-time">2016 - 2017</p>
         </header>
-        <div class="body">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>Customer facing role.</li>
             </ul>
         </div>
     </article>
 </section>
-<section class="achievement_class">
-    <h1>Personal Interests and Experiences</h1>
-    <article class="achievement">
-        <div class="body">
+<section class="b-class">
+    <h1 class="b-class__name">
+        Personal Interests and Experiences
+    </h1>
+    <article class="b-class__achievement">
+        <div class="b-class__achievement-body">
             <ul>
                 <li>
                     I enjoy learning languages, and have self-taught myself Japanese since 2016. 
@@ -171,13 +210,16 @@
                     I like researching control systems. Particularly, I am interested in the power electronics and
                     software necessary for efficient control of large actuators, such as the BLDC motors used within the Toyota Prius. 
                 </li>
-                <li>I have an adept knowledge of automotive mechanics, and interest in automotive electronics and automation.</li>
+                <li>
+                    I have an adept knowledge of automotive mechanics, and interest in automotive electronics and automation.
+                </li>
                 <li>
                     I have enjoyed an accelerated learning level: completed equivalent first-year university courses during high school,
-                and consequently had advanced standing at university.
+                    and consequently had advanced standing at university.
                 </li>
             </ul>
         </div>
     </article>
 </section>
+
 {% endblock %}

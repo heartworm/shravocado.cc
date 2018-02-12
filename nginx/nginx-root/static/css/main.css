@@ -1,5 +1,6 @@
 .b-banner {
     display: block;
+    margin-bottom: 2em;
     text-align: center;
 }
 
@@ -49,6 +50,7 @@
 .b-banner__nav-link {
     display: inline;
     padding: 0 0.1em;
+    text-decoration: none;
 }
 
 .b-banner__nav-link--sep:after {
@@ -68,7 +70,7 @@
 
 @media (min-width: 850px) {
     .b-banner {
-        height: 500px;
+        margin-bottom: -8em;
     }
 
     .b-banner__title-nav-box {
@@ -105,10 +107,21 @@
         text-shadow: -2px -1px 0.5px #EEE;
     }
 
-    .b-banner__nav {
-        z-index: -2;
+    .b-banner__nav:before {
+        content: "";
         border-top: 1px dashed black;
-        border-bottom: none;
+        z-index: -2;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .b-banner__nav {
+        /* z-index: -2;
+        border-top: 1px dashed black;
+        border-bottom: none; */
+        border: none;
         margin-top: 0em;
         padding: 1em 0;
         position: relative;
@@ -121,6 +134,7 @@
 
     .b-banner__nav-group {
         position: absolute;
+        z-index: 0;
     }
 
     .b-banner__nav-group--left {
