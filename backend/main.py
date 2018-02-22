@@ -8,13 +8,17 @@ app = Flask(__name__)
 def cv():
     return render_template('pages/cv.html')
 
-@app.route('/about')
+@app.route('/blog')
 def about():
-    return render_template('pages/about.html')
+    return render_template('pages/blog.html')
 
 @app.route('/links')
 def links():
     return render_template('pages/links.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('pages/projects.html')
 
 
 @app.route('/')

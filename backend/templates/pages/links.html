@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block head %}
+<style>
+    .b-links {
+        list-style: none;
+    }
+
+    .b-links__link, .b-links__link:hover {
+        display: inline-block;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 1em 0;
+        border-radius: 3px;
+        font-size: 18pt;
+        text-decoration: none;
+        background: #333;
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<ul class="b-links">
+    <li class="one-half column"><a class="b-links__link" href="https://www.thingiverse.com/shravanlal/designs">My Thingiverse</a></li>
+    <li class="one-half column"><a class="b-links__link" href="https://github.com/heartworm">My GitHub</a></li>
+</ul>
+
+{% endblock %}
