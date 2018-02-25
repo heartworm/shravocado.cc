@@ -9,14 +9,13 @@
 }
 
 .b-banner__title-box {
-    margin-top: 0.5em;
     background-color: rgba(255,255,255,0.5);
     padding: 0;
 }
 
 .b-banner__subtitle {
     font-family: 'Lora', serif;
-    font-size: 1em;
+    font-size: 10pt;
     font-style: italic;
     display: block;
     margin: 0;
@@ -27,7 +26,7 @@
     line-height: 80%;
     margin: 0;
     padding: 0;
-    font-size: 2.55em;
+    font-size: 32pt;
     display: block;
     font-family: 'Crete Round', serif;
     font-style: italic;
@@ -66,11 +65,11 @@
 
 @media (min-width: 400px) {
     .b-banner__title {
-        font-size: 4em;
+        font-size: 48pt;
     }
 
     .b-banner__subtitle {
-        font-size: 1.5em;
+        font-size: 18pt;
     }
 }
 
@@ -88,14 +87,13 @@
     }
 
     .b-banner__title-box {
-        margin-top: 0;
         background-color: rgba(255,255,255,0.5);
         padding: 1em 0;
     }
 
     .b-banner__subtitle {
         font-family: 'Lora', serif;
-        /* font-size: 20pt; */
+        font-size: 20pt;
         font-style: italic;
         display: block;
         margin: 0;
@@ -110,7 +108,7 @@
         font-family: 'Crete Round', serif;
         font-style: italic;
         font-weight: 400;
-        font-size: 5em;
+        font-size: 60pt;
         color: #333;
         text-shadow: -2px -1px 0.5px #EEE;
     }
@@ -137,7 +135,7 @@
     }
 
     .b-banner__nav-link {
-        font-size: 1em;
+        font-size: 12pt;
     }
 
     .b-banner__nav-group {
@@ -164,13 +162,6 @@
     
     .b-banner__nav-link--sep:last-child:after {
         content: none;
-    }
-
-}
-
-@media print {
-    .b-banner {
-        display: none;
     }
 
 }

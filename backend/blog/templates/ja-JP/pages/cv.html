@@ -1,0 +1,196 @@
+{% extends "../base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/cv.css" />
+{% endblock %}
+
+{% block content %}
+<header class="b-cv-header">
+    <h1>履歴書</h1>
+</header>
+<section class="b-cv-class">
+    <h1 class="b-cv-class__name">
+        個人情報
+    </h1>
+    <article class="b-cv-class__achievement">
+        <div class="b-cv-class__achievement-body">
+            <p>名前：シラバン　ラール</p>
+            <p></p>
+        </div>
+    </article>
+</section>
+<section class="b-cv-class">
+    <h1 class="b-cv-class__name">
+        教育と資格
+    </h1>
+    <article class="b-cv-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-cv-class__achievement-name">Queensland University of Technology</h2>
+            <p class="b-cv-class__achievement-subname">工学　（エンジニアリング）</p>
+            <p class="b-cv-class__achievement-time">2015年～現在</p>
+        </header>
+        <div class="b-cv-class__achievement-body">
+            <ul>
+                <li>専攻：メカトロニクス</li>
+                <li>副専攻：語学、ロボティクス</li>
+                <li>二年間の学習にかけて平均の成績：6.6/7</li>
+            </ul>
+        </div>
+    </article>
+    <article class="b-cv-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-cv-class__achievement-name">QASMT (高等学校)</h2>
+            <p class="b-cv-class__achievement-subname">国際バカロレア</p>
+            <p class="b-cv-class__achievement-time">2013年～2015年</p>
+        </header>
+        <div class="b-cv-class__achievement-body">
+            <ul>
+                <li>入学試験がある学校です。</li>
+                <li>IB42の成績で卒業しました</li>
+            </ul>
+        </div>
+    </article>
+</section>
+<section class="b-cv-class">
+    <h1 class="b-cv-class__name">実績</h1>
+    <article class="b-cv-class__achievement">
+        <div class="b-cv-class__achievement-body">
+            <ul>
+                <li>2017年の「Unearthed Hackathon」に参加。人気なプロジェクトを受賞しました。</li>
+                <li>2016年の「Tanda Hackathon」に参加。</li>
+                <li>2015年の「Australian Informatics Olympiad」のブロンズアワードを受賞しました。</li>
+                <li>2013年のデンバーで行われたスーパコンピュータ会議（SC13)に学校の代表として参加しました。</li>
+            </ul>
+        </div>
+    </article>
+</section>
+<section class="b-cv-class">
+    <h1 class="b-cv-class__name">
+        才能
+    </h1>
+    <article class="b-cv-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-cv-class__achievement-name">ITの才能</h2>
+        </header>
+        <div class="b-cv-class__achievement-body">
+            <ul>
+                <li>オブジェクト指向言語での能力: Python, Java, C# (.NET), C++</li>
+                <li>ウェッブ開発の能力: JavaScript (ECMAScript7), PHP, Flask, Django, NODE.js</li>
+                <li>「MySQL」と「Microsoft SQL Server」の知識</li>
+                <li>三次元のCGテクノロジーの知識：「OpenGL」と「Unity3D」</li>
+                <li>組み込みシステムの関心、とうに「Atmel AVR」と「STM32 Series」というマイクロコントローラー。</li>
+                <li>自身で習った他のテクノロジーの経験：機械学習 (SKLearn), 深層学習(Tensorflow, Torch, XGBoost), コンピュータビジョン　(OpenCV)</li>
+            </ul>
+        </div>
+    </article>
+    <article class="b-cv-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-cv-class__achievement-name">工学の才能</h2>
+        </header>
+        <div class="b-cv-class__achievement-body">
+            <ul>
+                <li>「EAGLE」と「Altium」での回路設計</li>
+                <li>3D デザインとプリント</li>
+            </ul>
+        </div>
+    </article>
+    <article class="b-cv-class__achievement">
+        <heade class="b-achievement-header"r>
+            <h2 class="b-cv-class__achievement-name">他の能力</h2>
+        </header>
+        <div class="b-cv-class__achievement-body">
+            <ul>
+                <li>心肺蘇生法と応急処置のトレーニング証明書 (First Aid Queensland).</li>
+                <li>英語のネイティブスピーカー</li>
+                <li>
+                    日本語能力試験N3の合格　(<a href="http://www.jlpt.jp/about/levelsummary.html">詳細</a>)、N2に目指しています.
+                </li>
+            </ul>
+        </div>
+    </article>
+</section>
+<section class="b-cv-class">
+    <h1 class="b-cv-class__name">
+        職歴
+    </h1>
+    <article class="b-cv-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-cv-class__achievement-name">
+                <a href="https://www.credfin.com.au/">Jacaranda Finance (CredFin Service)</a>
+            </h2>
+            <p class="b-cv-class__achievement-subname">バックエンド開発</p>
+            <p class="b-cv-class__achievement-time">2017年8月～現在</p>
+        </header>
+        <div class="b-cv-class__achievement-body">
+            <ul>
+                <li>Built web scraping engines for retrieving transaction data from clients' bank accounts. Uses PhantomJS.</li>
+                <li>Built backend for transaction categorisation. Uses Django, Numpy and other technolgies.</li>
+                <li>
+                    Designed system for load tolerance. Through use of containerisation (Docker), load balancing,
+                    message queues (RabbitMQ) and stateless workers.
+                </li>
+            </ul>
+        </div>
+    </article>
+    <article class="b-cv-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-cv-class__achievement-name">
+                <a href="https://qasmt.eq.edu.au">Education Queensland (QASMT)</a>
+            </h2>
+            <p class="b-cv-class__achievement-subname">高校三年生の物理チューター</p>
+            <p class="b-cv-class__achievement-time">2016年中</p>
+        </header>
+        <div class="b-cv-class__achievement-body">
+            <ul>
+                <li>レッスンの用意と、生徒との相談が必要でした。</li>
+                <li>時々に英語、数学、他の科目も教えていました。</li>
+            </ul>
+        </div>
+    </article>
+    <article class="b-cv-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-cv-class__achievement-name">
+                <a href="http://1010tutoring.com/">10/10 Tutoring</a>
+            </h2>
+            <p class="b-cv-class__achievement-subname">数学、ITのチューター</p>
+            <p class="b-cv-class__achievement-time">2016年～2017年</p>
+        </header>
+    </article>
+    <article class="b-cv-class__achievement">
+        <header class="b-achievement-header">
+            <h2 class="b-cv-class__achievement-name">
+                <a href="https://dominos.com.au">ドミノピザ</a>
+            </h2>
+            <p class="b-cv-class__achievement-subname">レジと車送達</p>
+            <p class="b-cv-class__achievement-time">2016年～2017年</p>
+        </header>
+    </article>
+</section>
+<section class="b-cv-class">
+    <h1 class="b-cv-class__name">
+        趣味と希望
+    </h1>
+    <article class="b-cv-class__achievement">
+        <div class="b-cv-class__achievement-body">
+            <ul>
+                <li>
+                    I enjoy learning languages, and have self-taught myself Japanese since 2016. 
+                    I am always astounded by the array of different syntaxes and methods which can be used to express a single idea in different languages. 
+                </li>
+                <li>
+                    I like researching control systems. Particularly, I am interested in the power electronics and
+                    software necessary for efficient control of large actuators, such as the BLDC motors used within the Toyota Prius. 
+                </li>
+                <li>
+                    I have an adept knowledge of automotive mechanics, and interest in automotive electronics and automation.
+                </li>
+                <li>
+                    I have enjoyed an accelerated learning level: completed equivalent first-year university courses during high school,
+                    and consequently had advanced standing at university.
+                </li>
+            </ul>
+        </div>
+    </article>
+</section>
+
+{% endblock %}

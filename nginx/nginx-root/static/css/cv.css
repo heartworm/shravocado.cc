@@ -1,0 +1,25 @@
+.b-cv-header {
+    text-align: center;
+}
+
+.b-cv-class__name {
+    font-size: 32pt;
+}
+
+.b-cv-class__achievement {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 1px dashed black;
+}
+
+.b-cv-class__achievement-name {
+    font-size: 24pt;
+}
+
+.b-cv-class__achievement-subname, .b-cv-class__achievement-name {
+    margin: 0 0;
+}
+
+.b-cv-class__achievement-body {
+    margin-left: 1em;
+}
