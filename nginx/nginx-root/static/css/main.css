@@ -169,11 +169,13 @@
 }
 
 @media print {
-    .b-banner {
-        display: none;
+    .container {
+        max-width: none;
     }
 
+    
 }
+
 
 /* https://gist.github.com/mfornos/9991865 watta ledge */
 

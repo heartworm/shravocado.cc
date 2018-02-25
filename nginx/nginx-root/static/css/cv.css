@@ -23,3 +23,29 @@
 .b-cv-class__achievement-body {
     margin-left: 1em;
 }
+
+@media print {
+    .b-banner {
+        display: none;
+    }
+
+    .b-cv-header {
+        font-size: 2em;
+    }
+
+    .b-cv-class__name {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .b-cv-class__achievement-name {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .b-cv-class__achievement-name-link {
+        text-decoration: none;
+        color: black;
+    }
+
+}
