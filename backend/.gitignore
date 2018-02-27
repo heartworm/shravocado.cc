@@ -105,3 +105,4 @@ venv.bak/
 .mypy_cache/
 
 backend/backend/local_settings.py
+.idea
