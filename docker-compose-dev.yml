@@ -3,7 +3,7 @@ services:
   web:
     build: ./nginx
     volumes:
-      - "/etc/letsencrypt:/etc/letsencrypt"
+      - "./nginx/ssl_dev:/etc/letsencrypt/live/shravocado.cc"
       - "./nginx/nginx-root:/usr/share/nginx/html"
     ports:
       - "80:80"

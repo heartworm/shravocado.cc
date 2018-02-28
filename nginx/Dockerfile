@@ -1,5 +1,4 @@
 FROM nginx
 COPY nginx-root /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY /etc/letsencrypt /etc/letsencrypt
 EXPOSE 80
