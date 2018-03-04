@@ -1,5 +1,31 @@
 {% extends "../base.html" %}
 
+{% block head %}
+    <style >
+        .b-blog_item {
+            display: block;
+        }
+
+        .b-blog-item__title {
+            display: block;
+            font-size: 2em;
+            margin-bottom: 0;
+        }
+        .b-blog-item__datetime {
+            display: block;
+        } 
+    </style>
+{% endblock %}
+
 {% block content %}
-<pre>Doesn't exist either lmao</pre>
+    {% for post in posts %}
+        <article class="b-blog-item">
+            <header>
+                <a><h1 class="b-blog-item__title">{{ post.title }}</h1></a>
+                <p class="b-blog-item__datetime">{{ post.datetime }}</p>
+            </header>
+        </article>
+    {% empty %}
+        <p>ポルトが見つかりませんでした。</p>
+    {% endfor %}
 {% endblock %}

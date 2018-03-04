@@ -8,6 +8,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    extra_hosts:
+      - "backend:192.168.1.11"
   backend:
     build: ./backend
     volumes: 

@@ -18,7 +18,7 @@ from django.urls import path, include
 import blog.urls
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('jp/', include(blog.urls), {'locale': 'ja-JP'}),
     path('', include(blog.urls), {'locale': 'en-AU'})
 ]

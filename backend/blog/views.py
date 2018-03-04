@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
+from .models import BlogPost
+from django.http import Http404
 
 class LanguageMixin:
     @property
@@ -32,3 +34,29 @@ class LinksView(LanguageMixin, TemplateView):
 
 class BlogView(LanguageMixin, TemplateView):
     template_name = "pages/blog.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        posts = BlogPost.objects.filter(locale=self.locale).order_by("-datetime")
+        return {
+            **context,
+            "posts": posts
+        }
+
+class BlogPostView(LanguageMixin, TemplateView):
+    template_name = "pages/post.html"
+
+    def get_context_data(self, *, slug, **kwargs):
+        context = super().get_context_data(**kwargs)
+        try:
+            post = BlogPost.objects.get(locale=self.locale, slug=slug)
+        except BlogPost.DoesNotExist:
+            raise Http404()
+
+
+
+        return {
+            **context,
+            "post": post
+        }
+

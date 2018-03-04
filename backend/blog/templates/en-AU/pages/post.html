@@ -1,0 +1,14 @@
+{% extends "../base.html" %}
+
+{% block content %}
+<article class="b-blog-post">
+    <header class="b-blog-post__header">
+        <h1>{{post.title}}</h1>
+        <p>{{post.datetime}}</p>
+    </header>
+    <div class="b-blog-post__content">
+        {{ post.html | safe }}
+    </div>
+</article>
+
+{% endblock %}
