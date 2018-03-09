@@ -46,10 +46,12 @@ class BlogView(LanguageMixin, TemplateView):
 class BlogPostView(LanguageMixin, TemplateView):
     template_name = "pages/post.html"
 
-    def get_context_data(self, *, slug, **kwargs):
+    def get_context_data(self, *, date, slug, **kwargs):
         context = super().get_context_data(**kwargs)
         try:
-            post = BlogPost.objects.get(locale=self.locale, slug=slug)
+            post = BlogPost.objects.get(locale=self.locale, 
+                                        slug=slug,
+                                        datetime__date = date)
         except BlogPost.DoesNotExist:
             raise Http404()
 

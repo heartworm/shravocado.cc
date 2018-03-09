@@ -21,7 +21,7 @@
     {% for post in posts %}
         <article class="b-blog-item">
             <header>
-                <a href="{% url 'post' post.slug %}">
+                <a href="{% url 'post' post.iso_date post.slug %}">
                     <h1 class="b-blog-item__title">{{ post.title }}</h1>
                 </a>
                 <p class="b-blog-item__datetime">{{ post.datetime }}</p>
