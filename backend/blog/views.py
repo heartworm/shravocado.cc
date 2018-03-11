@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.base import TemplateView
-from .models import BlogPost
+from django.views import View
+from .models import BlogPost, BlogTag
 from django.http import Http404
+from django.conf import settings
 
 class LanguageMixin:
     @property
@@ -35,30 +37,47 @@ class LinksView(LanguageMixin, TemplateView):
 class BlogView(LanguageMixin, TemplateView):
     template_name = "pages/blog.html"
 
+    def get_blog_posts(self):
+        return BlogPost.objects.filter(locale=self.locale)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        posts = BlogPost.objects.filter(locale=self.locale).order_by("-datetime")
+        posts = self.get_blog_posts().order_by("-datetime")
         return {
             **context,
             "posts": posts
         }
 
-class BlogPostView(LanguageMixin, TemplateView):
-    template_name = "pages/post.html"
+class BlogByTagView(BlogView):
+    def get_blog_posts(self):
+        return super().get_blog_posts().filter(tags__name=self.kwargs['tag'])
 
-    def get_context_data(self, *, date, slug, **kwargs):
-        context = super().get_context_data(**kwargs)
+class BlogPostMixin:
+    def get_blog_post(self):
         try:
-            post = BlogPost.objects.get(locale=self.locale, 
-                                        slug=slug,
-                                        datetime__date = date)
+            return BlogPost.objects.get(locale=self.locale, 
+                                        slug=self.kwargs['slug'],
+                                        datetime__date = self.kwargs['date'])
         except BlogPost.DoesNotExist:
             raise Http404()
 
 
 
+class BlogPostView(LanguageMixin, BlogPostMixin, TemplateView):
+    template_name = "pages/post.html"
+
+    def get_context_data(self, *, date, slug, **kwargs):
+        context = super().get_context_data(**kwargs)
         return {
             **context,
-            "post": post
+            "post": self.get_blog_post()
         }
 
+class BlogPostStaticRedirectView(LanguageMixin, BlogPostMixin, View):
+    def get(self, request, *, date, slug, path, **kwargs):
+        return redirect(
+            settings.BLOG_STATIC_URL_BASE.format(
+                id=self.get_blog_post().id,
+                path=path
+            )
+        )
