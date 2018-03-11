@@ -8,9 +8,9 @@
         <p class="b-blog-post__datetime">{{post.datetime |localtime}}</p>
         <p class="b-blog-post__tags">
             Tags: 
-            {% for tag in  post.tag_list %}
+            {% for tag in post.tag_list %}
             <a>
-                {{tag}}
+                <a href="{% url 'blog-tag-list' tag %}">{{tag}}</a>
             </a> 
             {%endfor%}
         </p>

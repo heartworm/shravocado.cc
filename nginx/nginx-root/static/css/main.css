@@ -1,7 +1,11 @@
 .b-banner {
     display: block;
-    margin-bottom: 2em;
+    margin-top: 5em;
     text-align: center;
+}
+
+.b-content {
+    margin-top: 2em;
 }
 
 .b-banner__img {

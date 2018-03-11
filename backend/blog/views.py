@@ -17,6 +17,12 @@ class LanguageMixin:
     def get_template_names(self):
         return [self.get_template()]
 
+    def get_context_data(self, **kwargs):
+        return {
+            **super().get_context_data(**kwargs),
+            'clean': "clean" in self.request.GET
+        }
+
 
 class IndexView(LanguageMixin, TemplateView):
     template_name = "pages/index.html"
