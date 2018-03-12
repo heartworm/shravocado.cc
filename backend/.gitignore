@@ -104,7 +104,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-backend/backend/local_settings.py
+backend/local_settings.py
 .idea
 .vscode
-nginx/nginx-root/static/posts/
