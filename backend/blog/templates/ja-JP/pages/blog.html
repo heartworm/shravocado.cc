@@ -14,18 +14,32 @@
         .b-blog-item__datetime {
             display: block;
         } 
+        .b-blog-results__summary {
+            font-size: 2em;
+        }
     </style>
 {% endblock %}
 
 {% block content %}
+<section class="b-blog-results">
+    <header class="b-blog-results__header">
+        <h1 class="b-blog-results__summary">
+            {% block blog-results__summary %}
+                全てのポスト、最近の順:
+            {% endblock %}
+        </h1>
+    </header>
     {% for post in posts %}
         <article class="b-blog-item">
             <header>
-                <a><h1 class="b-blog-item__title">{{ post.title }}</h1></a>
+                <a href="{% url 'post' post.iso_date post.slug %}">
+                    <h1 class="b-blog-item__title">{{ post.title }}</h1>
+                </a>
                 <p class="b-blog-item__datetime">{{ post.datetime }}</p>
             </header>
         </article>
     {% empty %}
         <p>ポストが見つかりませんでした。</p>
     {% endfor %}
+</section>
 {% endblock %}

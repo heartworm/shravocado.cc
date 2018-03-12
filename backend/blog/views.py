@@ -55,6 +55,8 @@ class BlogView(LanguageMixin, TemplateView):
         }
 
 class BlogByTagView(BlogView):
+    template_name = "pages/blog-tag.html"
+
     def get_blog_posts(self):
         return super().get_blog_posts().filter(tags__name=self.kwargs['tag'])
 
@@ -66,8 +68,6 @@ class BlogPostMixin:
                                         datetime__date = self.kwargs['date'])
         except BlogPost.DoesNotExist:
             raise Http404()
-
-
 
 class BlogPostView(LanguageMixin, BlogPostMixin, TemplateView):
     template_name = "pages/post.html"

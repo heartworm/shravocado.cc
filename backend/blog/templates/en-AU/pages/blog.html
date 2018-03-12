@@ -14,10 +14,22 @@
         .b-blog-item__datetime {
             display: block;
         } 
+        .b-blog-results__summary {
+            font-size: 2em;
+        }
     </style>
 {% endblock %}
 
 {% block content %}
+<section class="b-blog-results">
+    <header class="b-blog-results__header">
+        
+        <h1 class="b-blog-results__summary">
+            {% block blog-results__summary %}
+                All blog posts:
+            {% endblock %}
+        </h1>
+    </header>
     {% for post in posts %}
         <article class="b-blog-item">
             <header>
@@ -30,4 +42,5 @@
     {% empty %}
         <p>No posts found :(</p>
     {% endfor %}
+</section>
 {% endblock %}
